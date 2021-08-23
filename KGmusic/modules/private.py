@@ -55,7 +55,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>🤖 **Heii** {message.from_user.first_name}**\n
+        f"""<b>🙋🏻‍♀️ **ʜᴇʟʟᴏ** **{message.from_user.first_name}**\n
 💃🏻 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀᴋᴀɴ ᴍᴇɴᴇᴍᴀɴɪ ᴋᴀʟɪᴀɴ ʏᴀɴɢ sᴇʀɪɴɢ sᴇɴᴅɪʀɪᴀɴ ᴅɪ ᴠᴄɢ!
 
 🙇🏻‍♀️ ᴊɪᴋᴀ ᴋᴀᴍᴜ ᴛɪᴅᴀᴋ ᴍᴇɴɢᴇʀᴛɪ ᴛᴇɴᴛᴀɴɢ {BOT_NAME} sɪʟᴀᴋᴀɴ ᴋʟɪᴄᴋ » 📚ᴄᴏᴍᴍᴀɴᴅ!
@@ -184,7 +184,7 @@ async def help(client: Client, message: Message):
     & ~ filters.edited
 )
 async def reload(client: Client, message: Message):
-    await message.reply_text("""✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**""",
+    await message.reply_text("""💃🏻 Devansa **berhasil dimulai ulang!**\n\n• **Kawan Devansa** telah **diperbarui**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
