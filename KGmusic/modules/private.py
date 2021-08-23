@@ -56,11 +56,11 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>🤖 **Heii** {message.from_user.first_name}**\n
-⚡ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀᴋᴀɴ ᴍᴇᴍʙᴀɴᴛᴜ ᴍᴇʀɪᴀʜᴋᴀɴ ɢʀᴏᴜᴘ ᴋᴀʟɪᴀɴ!
+💃🏻 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀᴋᴀɴ ᴍᴇɴᴇᴍᴀɴɪ ᴋᴀʟɪᴀɴ ʏᴀɴɢ sᴇʀɪɴɢ sᴇɴᴅɪʀɪᴀɴ ᴅɪ ᴠᴄɢ!
 
-⚙️ ᴊɪᴋᴀ ᴋᴀʟɪᴀɴ ᴛɪᴅᴀᴋ ᴍᴇɴɢᴇʀᴛɪ sɪʟᴀᴋᴀɴ ᴋʟɪᴄᴋ » 📚ᴄᴏᴍᴍᴀɴᴅ!
+🙇🏻‍♀️ ᴊɪᴋᴀ ᴋᴀᴍᴜ ᴛɪᴅᴀᴋ ᴍᴇɴɢᴇʀᴛɪ ᴛᴇɴᴛᴀɴɢ {BOT_NAME} sɪʟᴀᴋᴀɴ ᴋʟɪᴄᴋ » 📚ᴄᴏᴍᴍᴀɴᴅ!
 
-❓ ᴜɴᴛᴜᴋ ɪɴғᴏʀᴍᴀsɪ ᴋᴇsᴇʟᴜʀᴜʜᴀɴ ᴛᴇɴᴛᴀɴɢ ʙᴏᴛ sᴇʟᴇɴɢᴋᴀᴘɴʏᴀ /help.
+💁🏻‍♀️ ᴜɴᴛᴜᴋ ɪɴғᴏʀᴍᴀsɪ ᴋᴇsᴇʟᴜʀᴜʜᴀɴ ᴛᴇɴᴛᴀɴɢ {BOT_NAME} sᴇʟᴇɴɢᴋᴀᴘɴʏᴀ /help.
 <b>""",
 
         reply_markup=InlineKeyboardMarkup(
@@ -118,7 +118,7 @@ def map(pos):
             [InlineKeyboardButton(text = 'ɴᴇxᴛ »', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = f"https://t.me/EXGroupSupport"
+        url = f"https://t.me/KGSupportgroup"
         button = [
             [InlineKeyboardButton("➕ Tambahkan saya ke grup anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = 'ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ', url=f"https://t.me/rakasupport"),
@@ -205,7 +205,7 @@ async def ping_pong(client: Client, message: Message):
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "🏓 `PONG!!`\n"
+        "💃🏻 `PONG!!`\n"
         f"⚡️ `{delta_ping * 1000:.3f} ms`"
     )
 
