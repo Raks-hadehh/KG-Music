@@ -238,7 +238,7 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "💁🏻‍♀️**Devansa hanya mengenali** `/musicplayer on` **dan** `/musicplayer off`"
+            "💁🏻‍♀️ **Devansa hanya mengenali** `/musicplayer on` **dan** `/musicplayer off`"
         )
         return
     status = message.text.split(None, 1)[1]
@@ -246,7 +246,7 @@ async def hfmm(_, message):
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`Processing...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("💃🏻**Devansa Di Izinkan Bernyanyi Di Obrolan inj**")
+            await lel.edit("💃🏻 **Devansa Di Izinkan Bernyanyi Di Obrolan inj**")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
@@ -265,7 +265,7 @@ async def hfmm(_, message):
         )
     else:
         await message.reply_text(
-            "💁🏻‍♀️**Devansa Hanya Tau** `/musicplayer on` **dan** `/musicplayer off`"
+            "💁🏻‍♀️ **Devansa Hanya Tau** `/musicplayer on` **dan** `/musicplayer off`"
         )    
         
 
@@ -280,7 +280,7 @@ async def p_cb(b, cb):
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("💁🏻‍♀️**Devansa Sedang tidak Memutar lagu**")
+            await cb.message.edit("💁🏻‍♀️ **Devansa Sedang tidak Memutar lagu**")
         temp = []
         for t in queue:
             temp.append(t)
@@ -574,7 +574,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**Devansa Tidak Dapat Menemukan Lagu** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
+                "💁🏻‍♀️ **Devansa Tidak Dapat Menemukan Lagu** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
             )
             print(str(e))
             return
@@ -607,7 +607,7 @@ async def play(_, message: Message):
           await lel.edit("**berikan judul lagu yang ingin kamu putar !**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**💃🏻__Pilih Lagu Yang Kamu Ingin Putar__💃🏻**\n\n"
+            toxxt = "**💃🏻 __Pilih Lagu Yang Kamu Ingin Putar__💃🏻 **\n\n"
             j = 0
             useer=user_name
 
@@ -641,7 +641,7 @@ async def play(_, message: Message):
             return
             # Returning to pornhub
         except:
-            await lel.edit("🙅🏻‍♀️** Devansa Tidak Menemukan hasil yang cukup untuk dipilih..💃🏻 Devansa Mulai bermain langsung..**")
+            await lel.edit("🙅🏻‍♀️ ** Devansa Tidak Menemukan hasil yang cukup untuk dipilih..💃🏻 Devansa Mulai bermain langsung..**")
                         
             # print(results)
             try:
@@ -657,7 +657,7 @@ async def play(_, message: Message):
 
             except Exception as e:
                 await lel.edit(
-                "💁🏻‍♀️**Devansa Tidak Menemukan Lagunya.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan devansa"
+                "💁🏻‍♀️ **Devansa Tidak Menemukan Lagunya.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan devansa"
             )
                 print(str(e))
                 return
@@ -800,7 +800,7 @@ async def ytplay(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "💁🏻‍♀️**Devansa Tidak Menemukan Lagu.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
+            "💁🏻‍♀️ **Devansa Tidak Menemukan Lagu.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
         )
         print(str(e))
         return
@@ -923,7 +923,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query = queryy
     res = lel
-    await res.edit(f"💃🏻**Sabar Ya Devansa Cari Dlu** `{query}` **dari deezer**")
+    await res.edit(f"💃🏻 **Sabar Ya Devansa Cari Dlu** `{query}` **dari deezer**")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
