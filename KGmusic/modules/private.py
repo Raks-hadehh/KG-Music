@@ -56,10 +56,11 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>🤖 **Heii** {message.from_user.first_name}**\n
-⚠️ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Akan Membantu Anda Untuk Meriahkan Group Anda!**
+⚡ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀᴋᴀɴ ᴍᴇᴍʙᴀɴᴛᴜ ᴍᴇʀɪᴀʜᴋᴀɴ ɢʀᴏᴜᴘ ᴋᴀʟɪᴀɴ!
 
-⚙️ **Jika Kalian Tidak Mengerti,Silakan Klick » 📚 Commands button** Atau Gunakan '/help'
-Thanks to [KG](https://t.me/knsgnwn)
+⚙️ ᴊɪᴋᴀ ᴋᴀʟɪᴀɴ ᴛɪᴅᴀᴋ ᴍᴇɴɢᴇʀᴛɪ sɪʟᴀᴋᴀɴ ᴋʟɪᴄᴋ » 📚ᴄᴏᴍᴍᴀɴᴅ!
+
+❓ ᴜɴᴛᴜᴋ ɪɴғᴏʀᴍᴀsɪ ᴋᴇsᴇʟᴜʀᴜʜᴀɴ ᴛᴇɴᴛᴀɴɢ ʙᴏᴛ sᴇʟᴇɴɢᴋᴀᴘɴʏᴀ /help.
 <b>""",
 
         reply_markup=InlineKeyboardMarkup(
