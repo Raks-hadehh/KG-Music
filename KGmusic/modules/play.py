@@ -621,7 +621,7 @@ async def play(_, message: Message):
             while j < 7:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚠️ __Powered by KG MUSIC__\n\n"
+                toxxt += f" └ ⚠️ __Powered by ᴅᴇᴠᴀɴsᴀ ᴍᴜsɪᴄ__\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -678,7 +678,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
                     InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
                 ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/knsgnwn")
+                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
                 ],
             ]
         )
@@ -824,7 +824,7 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
                     InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
                 ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/knsgnwn")
+                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
                 ],
             ]
         )
@@ -1061,7 +1061,7 @@ async def lol_cb(b, cb):
                     InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
                     InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
                 ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/knsgnwn")
+                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
                 ],
             ]
         )
