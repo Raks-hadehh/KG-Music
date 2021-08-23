@@ -2,7 +2,7 @@
   "name": "KG-MUSIC",
   "description": "Repo for telegram bot, can play songs on vcg. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/kgproject1010/KG-Music",
+  "repository": "https://github.com/Raks-hadehh/KG-Music",
   "stack": "container",
   "logo": "https://telegra.ph/file/d90de32bd8864d38e2467.jpg",
   "buildpacks": [
