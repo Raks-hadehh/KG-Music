@@ -184,9 +184,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("📜 Playlist", "playlist"),
+                InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", "playlist"),
             ],
-            [InlineKeyboardButton("🗑️ Close", "cls")],
+            [InlineKeyboardButton("ᴄʟᴏsᴇ", "cls")],
         ]
     )
     return mar
@@ -401,9 +401,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("📜 Playlist", "playlist"),
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", "playlist"),
                 ],
-                [InlineKeyboardButton("🗑️ Close", "cls")],
+                [InlineKeyboardButton("ᴄʟᴏsᴇ", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -448,7 +448,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔁 **Lagu sedang di proses...**")
+    lel = await message.reply("🔁 **Lagu Sedang Di Proses Oleh Devansa...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -503,7 +503,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔁 **Bentar Gua Cari Dlu..**")
+    await lel.edit("🔁 **Sabar Ya Devansa Cari Dlu..**")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -535,19 +535,16 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("•ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("•ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
-                    InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
-                ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/knsgnwn")
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup")
                 ],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/2137d62ed6a46ab2abf23.png"
+        thumb_name = "https://telegra.ph/file/491b2c005d68f17655404.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -560,7 +557,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🤖 **Lagu sedang di proses..**")
+        await lel.edit("💃🏻 **Lagu Sedang Di Proses Oleh Devansa..**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -586,13 +583,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("•ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("•ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
-                InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
-                ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/knsgnwn")
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup")
                 ],
             ]
         )
@@ -604,7 +598,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🤖 **Sabar Ya Gess.**")
+        await lel.edit("💃🏻 **Devansa Memproses Lagu..**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -613,7 +607,7 @@ async def play(_, message: Message):
           await lel.edit("**berikan judul lagu yang ingin kamu putar !**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**__Please select the song you want to play__⚡**\n\n"
+            toxxt = "**__Please select the song you want to play__💃🏻**\n\n"
             j = 0
             useer=user_name
 
@@ -621,7 +615,7 @@ async def play(_, message: Message):
             while j < 7:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚠️ __Powered by ᴅᴇᴠᴀɴsᴀ ᴍᴜsɪᴄ__\n\n"
+                toxxt += f" └ 💃🏻 __Powered by ᴅᴇᴠᴀɴsᴀ-ᴍᴜsɪᴄ__\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -639,7 +633,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
                         InlineKeyboardButton("7️⃣", callback_data=f'plll 6|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="•ᴄʟᴏsᴇ", callback_data="cls")],
+                    [InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="cls")],
                 ]
             )     
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -672,13 +666,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                     [
                 [
-                    InlineKeyboardButton("•ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("•ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
-                    InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
-                ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup")
                 ],
             ]
         )
@@ -729,7 +720,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Sabar Ya Gess.**")
+    lel = await message.reply("💃🏻 **Devansa Memproses Lagu..**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -783,7 +774,7 @@ async def ytplay(_, message: Message):
             f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
         )
         return
-    await lel.edit("🤖 **Bentar Gua Cari Dlu..**")
+    await lel.edit("🔎 **Sabar Ya Devansa Cari Dlu..**")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -792,7 +783,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🤖 **Sabar Ya Gess.**")
+    await lel.edit("💃🏻 **Devansa Memproses Lagu..**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -818,13 +809,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("•ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("•ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
-                    InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
-                ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup")
                 ],
             ]
         )
@@ -876,7 +864,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 **Sedang proses lagu..**")
+    lel = await message_.reply("💃🏻 **Sedang proses lagu..**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -935,7 +923,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query = queryy
     res = lel
-    await res.edit(f"**Sedang Mencari Lagu** `{query}` **dari deezer**")
+    await res.edit(f"**Sabar Ya Devansa Cari Dlu** `{query}` **dari deezer**")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -945,7 +933,7 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/2137d62ed6a46ab2abf23.png"
+        thumbnail = "https://telegra.ph/file/491b2c005d68f17655404.png"
 
     except:
         await res.edit("**Nothing found!**")
@@ -960,7 +948,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="https://t.me/KGSupportgroup")],
+            [InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -976,9 +964,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🤖 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"💃🏻 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
     else:
-        await res.edit_text(f"🤖 **Playing...**")
+        await res.edit_text(f"💃🏻 **Playing...**")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -999,7 +987,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"🤖 **Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
+        caption=f"💃🏻 **Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
     )
     os.remove("final.png")
 
@@ -1055,13 +1043,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("•ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("•ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("•ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup"),
-                    InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rakasupport"),
-                ],[
-                    InlineKeyboardButton("•ᴏᴡɴᴇʀ", url=f"https://t.me/Heradlugasi")
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/KGSupportgroup")
                 ],
             ]
         )
