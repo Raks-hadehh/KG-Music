@@ -50,10 +50,10 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("⚠️ GAADA LAGU YANG LO PUTER!")
+        await message.reply_text("🤦🏻‍♀️ Tidak Ada Lagu Yang Devansa Temui")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("🤖 **BENTAR GUA CAPE!**")
+        await message.reply_text("🙅🏻‍♀️ **Devansa Cape Bentar Ya!**")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -64,10 +64,10 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("⚠️ GAADA LAGU YANG LO PAUSE!")
+        await message.reply_text("🤦🏻‍♀️ Tidak Ada Lagu Yang Devansa Temui!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("🤖 GUA MULAI LAGI NIH!")
+        await message.reply_text("💃🏻 Devansa Mulai Lagi!")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -76,7 +76,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("⚠️ GAADA LAGU YANG HARUS DI HENTIKAN!")
+        await message.reply_text("🤦🏻‍♀️ Tidak Ada Lagu Yang Devansa Temui!")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -84,7 +84,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("**DAAH CAPE GUA TOT!**")
+        await message.reply_text("**🙅🏻‍♀️ Udh Ya Devansa Cape!**")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -94,7 +94,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("⚠️ Gaada Request'an lagu selanjutnya!")
+        await message.reply_text("🤦🏻‍♀️ Devansa Tidak Menemui Request'an Selanjutnya!")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -123,4 +123,4 @@ async def admincache(client, message: Message):
             for member in await message.chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("⚙️ **Daftar Jamet** telah **diperbarui**")
+    await message.reply_text("👭🏻 **Daftar Kawan** Devansa **Diperbarui**")
